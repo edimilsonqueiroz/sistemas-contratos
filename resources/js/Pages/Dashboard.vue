@@ -1,9 +1,8 @@
 <script setup>
     import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
     import { Head } from '@inertiajs/vue3';
-    import { Bar } from 'vue-chartjs';
-
     
+    defineProps({page: String})
 </script>
 <script>
   import { Bar } from 'vue-chartjs'
@@ -69,6 +68,9 @@
                             :options="chartOptions"
                             :data="chartData"
                         />
+                    </div>
+                    <div>
+                        {{ page }}
                     </div>
                 </div>
             </div>
