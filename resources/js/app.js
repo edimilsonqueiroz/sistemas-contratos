@@ -4,10 +4,10 @@ import './bootstrap';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createApp, h } from 'vue';
-import VueSweetalert2 from 'vue-sweetalert2';
 import {Modal, ModalLink, renderApp } from '@inertiaui/modal-vue'
-import 'sweetalert2/dist/sweetalert2.min.css';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
@@ -24,8 +24,8 @@ createInertiaApp({
             .use(plugin)
             .component('Modal', Modal)
             .component('ModalLink', ModalLink)
-            .use(VueSweetalert2)
             .use(ZiggyVue)
+            .use(VueSweetalert2)
             .mount(el);
     },
     progress: {

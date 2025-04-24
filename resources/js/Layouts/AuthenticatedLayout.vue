@@ -94,7 +94,7 @@
             </div>
            
 
-            <div class="w-full h-full overflow-x-hidden p-4">
+            <div class="w-full h-full overflow-x-hidden p-3">
                 <slot/>
             </div>
         </div>

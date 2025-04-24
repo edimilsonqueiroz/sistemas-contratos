@@ -1,31 +1,38 @@
 <script setup>
     import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
     import { Head } from '@inertiajs/vue3';
+    
+    const show = () => {
+        this.$swal.fire({
+            toast: true, 
+            title: "Cadastrado com sucesso!",
+            icon: "success",
+            position: "top", 
+            showConfirmButton: false, 
+            timer: 3000, 
+            timerProgressBar: false,
+        });
+    }
 </script>
 <script>
+
     export default {
         methods: {
-            showAlert() {
-            
-                const Toast = this.$swal.mixin({
+            alert(){
+                this.$swal.fire({
                     toast: true, 
+                    title: "Cadastrado com sucesso!",
+                    icon: "success",
                     position: "top", 
                     showConfirmButton: false, 
                     timer: 3000, 
                     timerProgressBar: true,
                 });
-                
-                Toast.fire({
-                    icon: "success",
-                    title: "Cadastrado com sucesso!"
-                });
-                
             }
-        },
-    };
-    
-</script>
+        }
+    }
 
+</script>
 
 <template>
     <Head title="Dashboard" />
@@ -37,7 +44,8 @@
                     class="overflow-x-hidden-hidden bg-white shadow-sm sm:rounded-lg"
                 >
                     <div class="p-6 text-gray-900">
-                        <button @click="showAlert">Usuários</button>
+                        <button @click="alert">Usuários</button>
+                        <button @click="alert">Alerta</button>
                     </div>
                 </div>
             </div>

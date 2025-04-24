@@ -28,9 +28,9 @@ defineProps({
         </template>
 
         <div class="py-2 overflow-x-hidden">
-            <div class="mx-auto max-w-full px-2 md:px-3 space-y-6">
+            <div class="mx-auto max-w-full space-y-6">
                 <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
+                    class="bg-white shadow sm:rounded-lg rounded-lg mr-4 p-4 sm:p-8"
                 >
                     <UpdateProfileInformationForm
                         :must-verify-email="mustVerifyEmail"
@@ -40,13 +40,13 @@ defineProps({
                 </div>
 
                 <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
+                    class="bg-white p-4 shadow sm:rounded-lg rounded-lg mr-4 sm:p-8"
                 >
                     <UpdatePasswordForm class="max-w-xl" />
                 </div>
 
                 <div
-                    class="bg-white p-4 shadow sm:rounded-lg sm:p-8"
+                    class="bg-white p-4 shadow sm:rounded-lg rounded-lg mr-4 sm:p-8"
                 >
                     <DeleteUserForm class="max-w-xl" />
                 </div>
